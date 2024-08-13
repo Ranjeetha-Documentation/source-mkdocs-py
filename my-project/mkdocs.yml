@@ -50,9 +50,9 @@ plugins:
       version_selector: true
       css_dir: css
       javascript_dir: js
-  - mkdocs-versioning:
-      version: "1.0"
-      version_selector: true
+  # - mkdocs-versioning:
+  #     version: "1.0"
+  #     version_selector: true
 
 # markdown_extensions:
 #   - pymdownx.highlight:
@@ -78,5 +78,10 @@ extra:
     
 nav:
   - Home: index.md
-  - Arch: 
-    - Architecture: architecture/architecture.md
+  - Architecture: architecture/architecture.md
+  - Device-Management: device-management/device-management.md
+  # - Version: 
+  #   - 1.0: 
+  #     - Home: index.md
+  #     - Architecture: architecture/architecture.md
+
