@@ -1,87 +1,152 @@
 site_name: RDK Documentation
 site_url: https://ranjeetha-documentation.github.io/
-docs_dir: docs
-site_dir: site
+# docs_dir: docs
+# site_dir: site
 
-theme:
-  name: material
-  palette: 
+# theme:
+#   name: material
+#   palette: 
 
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
+#     # Palette toggle for light mode
+#     - scheme: default
+#       toggle:
+#         icon: material/brightness-7 
+#         name: Switch to dark mode
 
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  features:
-    - navigation.instant
-    - navigation.instant.progress
-    - navigation.instant.preview
-    - navigation.tracking
-    # - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.expand
-    - toc.integrate
-    - navigation.top
-    - navigation.sections
-    - search.suggest
-    - search.highlight
-    - search.share
-    - content.code.copy
-    - navigation.footer
-  palette:
-    - primary: 'indigo'
-    - accent: 'indigo'
+#     # Palette toggle for dark mode
+#     - scheme: slate
+#       toggle:
+#         icon: material/brightness-4
+#         name: Switch to light mode
+#   features:
+#     - navigation.instant
+#     - navigation.instant.progress
+#     - navigation.instant.preview
+#     - navigation.tracking
+#     # - navigation.tabs
+#     - navigation.tabs.sticky
+#     - navigation.sections
+#     - navigation.expand
+#     - toc.integrate
+#     - navigation.top
+#     - navigation.sections
+#     - search.suggest
+#     - search.highlight
+#     - search.share
+#     - content.code.copy
+#     - navigation.footer
+#   palette:
+#     - primary: 'indigo'
+#     - accent: 'indigo'
+#   font:
+#     - text: Roboto
+#     - code: Roboto Mono
+
+# plugins:
+#   - search
+#   - mike:
+#     # These fields are all optional; the defaults are as below...
+#       alias_type: symlink
+#       redirect_template: null
+#       deploy_prefix: ''
+#       canonical_version: null
+#       version_selector: true
+#       css_dir: css
+#       javascript_dir: js
+#   - mkdocs-versioning:
+#       version: "2.0"
+#   #     version_selector: true
+
+# # Repository
+# repo_name: "source-mkdocs-py"
+# repo_url: "https://github.com/Ranjeetha-Documentation/source-mkdocs-py"
+
+# markdown_extensions:
+#   - admonition
+#   - codehilite:
+#       guess_lang: false
+#       linenums: true
+#   - toc:
+#       permalink: true
+#   - pymdownx.betterem:
+#       smart_enable: all
+#   - pymdownx.caret
+#   - pymdownx.details
+#   - pymdownx.inlinehilite
+#   - pymdownx.magiclink
+#   - pymdownx.mark
+#   - pymdownx.smartsymbols
+#   - pymdownx.superfences
+#   - pymdownx.tabbed
+
+# # markdown_extensions:
+# #   - pymdownx.superfences:
+# #       custom_fences:
+# #         - name: mermaid
+# #           class: mermaid
+# #           format: !!python/name:pymdownx.superfences.fence_code_format
+# #   - pymdownx.tabbed:
+# #       alternate_style: true
+
+# extra:
+#   version:
+#     provider: mike
+    
+# nav:
+#   - Home: index.md
+#   - Architecture: architecture/architecture.md
+#   - Device-Management: device-management/device-management.md
+#   - Version Selector: "../"
+
+#   # - Version: 
+#   #   - 1.0: 
+#   #     - Home: index.md
+#   #     - Architecture: architecture/architecture.md
 
 plugins:
   - search
-  - mike:
-    # These fields are all optional; the defaults are as below...
-      alias_type: symlink
-      redirect_template: null
-      deploy_prefix: ''
-      canonical_version: null
-      version_selector: true
-      css_dir: css
-      javascript_dir: js
-  # - mkdocs-versioning:
-  #     version: "1.0"
-  #     version_selector: true
+  - git-revision-date-localized:
+      type: datetime
+  - mkdocs-versioning:
+      version: 0.3.0
+      exclude_from_nav: ["images"]
 
-# markdown_extensions:
-#   - pymdownx.highlight:
-#       anchor_linenums: true
-#       line_spans: __span
-#       pygments_lang_class: true
-#   - pymdownx.inlinehilite
-#   - pymdownx.snippets
-#   - pymdownx.superfences
+# Repository
 
-markdown_extensions:
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
+theme:
+  name: material
+  palette:
+    scheme: slate
+  features:
+    - tabs
+  icon:
+    logo: octicons/versions-24
+  favicon: images/favicon.svg
+  font:
+    text: Roboto
+    code: Roboto Mono
 
-extra:
-  version:
-    provider: mike
-    
 nav:
-  - Home: index.md
+  - Home: "index.md"
   - Architecture: architecture/architecture.md
   - Device-Management: device-management/device-management.md
-  # - Version: 
-  #   - 1.0: 
-  #     - Home: index.md
-  #     - Architecture: architecture/architecture.md
+  - Camera-Architecture: rdk-camera-architecture/rdk-camera-architecture.md
+  - Version Selector: "../"
 
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
